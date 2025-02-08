@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Ma Liste de Todo</h1>
+    <ul>
+        {% for todo in todos %}
+            <li>{{ todo.title }} - {{ todo.done ? 'Fait' : 'Non fait' }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
